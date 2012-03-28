@@ -32,7 +32,7 @@ case $1 in
 		;;
 	xmobar )
 		echo "Deploying .xmobarrc to ${paths["xmobar"]}..."
-		cp -i .vimrc ${paths["xmobar"]}
+		cp -i .xmobarrc ${paths["xmobar"]}
 		;;
 	xmonad )
 		echo "Deploying xmonad.hs to ${paths["xmonad"]}..."
