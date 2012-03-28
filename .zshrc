@@ -67,12 +67,14 @@ bindkey "^[[B" history-beginning-search-forward
 alias o='xdg-open'
 alias v='vim -p'
 alias g='git'
+alias t='urxvt -cd $PWD &>/dev/null &; disown'
+
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -a --color=auto'
 
 #c aliases
-alias cc="gcc -Wall --std=c99"
+alias cc="gcc -Wall -Wshadow -Wextra --std=c99"
 
 #python aliases
 alias py='python2.7'

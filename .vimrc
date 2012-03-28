@@ -2,6 +2,7 @@
 syntax on
 set number
 set hlsearch
+colorscheme slate
 
 " some toggle switches
 noremap <F4> :set number! number?<CR>
