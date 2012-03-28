@@ -1,0 +1,13 @@
+URxvt.transparent: true
+URxvt.shading: 20
+
+URxvt.scrollBar: off
+
+!URxvt.font: xft:Clean:antialias=true:
+URxvt.font: xft:Clean
+
+URxvt.foreground: green
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
