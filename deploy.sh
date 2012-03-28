@@ -4,8 +4,8 @@
 # prevent aliases over cp from fucking up the script.
 cp=/bin/cp
 
-vimrc_path=${HOME}/.vimrc
-vimfolder_path=$HOME/.vim
+vimrc_path=$HOME/.vimrc
+vimfolder_path=$HOME
 xmobarrc_path=$HOME/.xmobarrc
 xmonad_path=$HOME/.xmonad/xmonad.hs
 zshrc_path=$HOME/.zshrc
