@@ -1,0 +1,5 @@
+zstyle ':completion:*' completer _expand _complete _ignored _match _prefix
+zstyle ':completion:*' completions 1
+zstyle ':completion:*' glob 1
+zstyle ':completion:*' max-errors 0 numeric
+zstyle :compinstall filename '/home/slowpoke/.zshrc'

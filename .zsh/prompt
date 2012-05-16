@@ -1,0 +1,12 @@
+# Lines are diffrently colored depending on the user
+# Regular user --> blue
+# root ----------> red
+if [ `whoami` = 'root' ]; then
+	PROMPT=$'%{\e[0;31m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;31m%}%B]%b%{\e[0m%} - %b%{\e[0;31m%}%B[%b%{\e[1;37m%}%~%{\e[0;31m%}%B]%b%{\e[0m%} 
+%{\e[0;31m%}%B└─%B[%{\e[1;35m%}$%{\e[0;31m%}%B]>%{\e[0m%}%b '
+	PS2=$'     \e[0;31m%}%B>%{\e[0m%}%b '
+else
+	PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} 
+%{\e[0;34m%}%B└─%B[%{\e[1;35m%}$%{\e[0;34m%}%B]>%{\e[0m%}%b '
+	PS2=$'     \e[0;34m%}%B>%{\e[0m%}%b '
+fi
