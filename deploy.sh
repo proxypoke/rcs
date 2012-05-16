@@ -10,7 +10,8 @@ paths=(\
 	["vimfolder"]="$HOME"/.vim \
 	["xmobar"]=$HOME/.xmobarrc \
 	["xmonad"]=$HOME/.xmonad/xmonad.hs \
-	["zsh"]=$HOME/.zshrc \
+	["zshrc"]=$HOME/.zshrc \
+	["zrshfolder"]=$HOME/.zsh \
 	["urxvt"]=$HOME/.Xdefaults \
 	)
 
@@ -40,7 +41,8 @@ case $1 in
 		;;
 	zsh )
 		echo "Deploying .zshrc to ${paths["zsh"]}..."
-		cp -i .zshrc ${paths["zsh"]}
+		cp -i .zshrc ${paths["zshrc"]}
+		cp -ir .zsh ${paths["zshfolder"]}
 		;;
 	urxvt )
 		echo "Deploying .Xdefaults to ${paths["urxvt"]}..."
