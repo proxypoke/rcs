@@ -1,15 +1,17 @@
 " syntax highlighting, line numbers
 syntax on
+colorscheme slate
+set cursorline
 set number
 set hlsearch
-colorscheme slate
 
 " some toggle switches
 noremap <F4> :set number! number?<CR>
 noremap <F5> :set hlsearch! hlsearch?<CR>
 
 " wrap after 72 chars
-set tw=72
+set tw=79
+set colorcolumn=80
 
 " fuck off arrow keys, nobody likes you.
 map <Up> <nop>

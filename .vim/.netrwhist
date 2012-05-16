@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/etc/profile.d'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/slowpoke/coding/python/projects/blackbox_IRC-macros'
+let g:netrw_dirhist_2='/home/slowpoke/coding/python/projects/blackbox_IRC-macros/blackbox'
+let g:netrw_dirhist_3='/home/slowpoke/coding/python/projects/.Kirschwasser/core'
+let g:netrw_dirhist_4='/home/slowpoke/.ssh'
+let g:netrw_dirhist_5='/'
+let g:netrw_dirhist_6='/home/slowpoke/.flexget'

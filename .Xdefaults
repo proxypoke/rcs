@@ -1,13 +1,59 @@
-URxvt.transparent: true
-URxvt.shading: 20
+# perl extensions
+URxvt.perl-ext-common:  default,matcher
+URxvt.perl-ext:		default,urxvi
 
+# colors
+
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+urxvt*color0:    #6C6C6C
+urxvt*color1:    #CC0000
+urxvt*color2:    #4E9A06
+urxvt*color3:    #C4A000
+urxvt*color4:    #3465A4
+urxvt*color5:    #75507B
+urxvt*color6:    #06989A
+urxvt*color7:    #F2F2F2
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+urxvt*color8:    #555753
+urxvt*color9:    #EF2929
+urxvt*color10:    #8AE234
+urxvt*color11:    #FCE94F
+urxvt*color12:    #729FCF
+urxvt*color13:    #AD7FA8
+urxvt*color14:    #34E2E2
+urxvt*color15:    #EEEEEC
+
+
+# look & feel
+URxvt.foreground: green
+URxvt.transparent: true
+URxvt.shading: 5
+URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
 URxvt.scrollBar: off
 
-!URxvt.font: xft:Clean:antialias=true:
-URxvt.font: xft:Clean
 
-URxvt.foreground: green
-
-URxvt.perl-ext-common:  default,matcher
+# matcher settings
 URxvt.urlLauncher:      /usr/bin/firefox
 URxvt.matcher.button:   1
+
+# urxvi settings
+URxvt.keysym.F1:	perl:urxvi

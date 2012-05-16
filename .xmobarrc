@@ -1,4 +1,4 @@
-Config	{ font = "xft:Bitstream Vera Sans Mono:size=8:antialias=true"
+Config	{ font = "xft:Clean:size=8:antialias=true"
 		, bgColor = "black"
 		, fgColor = "green"
 		, position = Top
@@ -13,5 +13,5 @@ Config	{ font = "xft:Bitstream Vera Sans Mono:size=8:antialias=true"
 				]
 		, sepChar = "%"
 		, alignSep = "}{"
-		, template = " %StdinReader% } %cpu% | %memory% | %swap% { %eth0% |<fc=#ee9a00>%date%</fc>"
+		, template = " %StdinReader% } %cpu% | %memory% | %swap% { %eth0% | <fc=#ee9a00>%date%</fc>"
 		}
