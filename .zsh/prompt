@@ -1,4 +1,4 @@
-# Lines are diffrently colored depending on the user
+# Lines are differently colored depending on the user
 # Regular user --> blue
 # root ----------> red
 if [ `whoami` = 'root' ]; then

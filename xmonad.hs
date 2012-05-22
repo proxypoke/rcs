@@ -13,8 +13,8 @@ screenshot = "sleep 0.2; scrot -e 'mv $f ~/screenshots'"
 screensaver = "xscreensaver-command --lock"
 
 myManageHook = composeAll
-	[ className =? "Smplayer2"						--> doShift "4"
-	, className =? "MPlayer"						--> doShift "4"
+	[ className =? "Smplayer2"						--> doShift "5"
+	, className =? "MPlayer"						--> doShift "5"
 	, className =? "Xchat"							--> doShift "6"
 	, className =? "Thunderbird-bin"				--> doShift "7"
 	, className =? "Thunderbird"					--> doShift "7"

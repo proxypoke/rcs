@@ -1,9 +1,13 @@
 " syntax highlighting, line numbers
 syntax on
-colorscheme slate
+colorscheme default
 set cursorline
 set number
 set hlsearch
+
+" some plugin settings
+call pathogen#infect()
+let g:ScreenShellExternal=1
 
 " some toggle switches
 noremap <F4> :set number! number?<CR>
