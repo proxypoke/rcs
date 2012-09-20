@@ -1,1 +1,7 @@
 *.swp
+
+.vim/.netrwhist
+.vim/sessions
+.vim/plugin
+
+.i3/i3log

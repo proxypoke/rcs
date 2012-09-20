@@ -46,7 +46,7 @@ urxvt*color15:    #EEEEEC
 # look & feel
 URxvt.foreground: green
 URxvt.transparent: true
-URxvt.shading: 5
+URxvt.shading: 15
 URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
 URxvt.scrollBar: off
 

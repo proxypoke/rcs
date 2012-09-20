@@ -1,3 +1,26 @@
+" set up vundle
+filetype off " required
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Bundles
+Bundle 'gmarik/vundle'
+Bundle 'klen/python-mode'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'xolox/vim-session'
+
+" filetype options
+filetype plugin indent on
+
+" gtfo swapfiles
+set directory=~/.vim/swp
+
+" sessions
+let g:session_autosave=1
+let g:session_autoload=1
+
 " syntax highlighting, line numbers
 syntax on
 colorscheme default
@@ -5,17 +28,25 @@ set cursorline
 set number
 set hlsearch
 
-" some plugin settings
-call pathogen#infect()
+" ScreenShell settings
 let g:ScreenShellExternal=1
+
+" complete options
+set completeopt+=menuone
+set completeopt-=preview
+set pumheight=20
 
 " some toggle switches
 noremap <F4> :set number! number?<CR>
 noremap <F5> :set hlsearch! hlsearch?<CR>
 
-" wrap after 72 chars
-set tw=79
-set colorcolumn=80
+" 8 space tabs are bad and you should feel bad if you use them
+set tabstop=4
+set shiftwidth=4
+
+" wrap after 80 chars
+set tw=80
+set colorcolumn=81
 
 " fuck off arrow keys, nobody likes you.
 map <Up> <nop>
@@ -41,6 +72,3 @@ map tm :tabmove<Space>
 
 " various stuff
 nmap <CR> o<Esc>
-
-" filetype options
-filetype plugin indent on

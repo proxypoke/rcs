@@ -8,14 +8,13 @@ declare -A paths
 paths=(\
 	["vimrc"]=$HOME/.vimrc \
 	["vimfolder"]="$HOME"/.vim \
-	["xmobar"]=$HOME/.xmobarrc \
-	["xmonad"]=$HOME/.xmonad/xmonad.hs \
 	["zshrc"]=$HOME/.zshrc \
-	["zrshfolder"]=$HOME/.zsh \
+	["zshfolder"]=$HOME/.zsh \
 	["urxvt"]=$HOME/.Xdefaults \
+	["i3"]=$HOME/.i3 \
 	)
 
-options=( 'vim' 'xmobar' 'xmonad' 'zsh' 'urxvt' )
+options=( 'vim' 'zsh' 'urxvt' 'i3' )
 
 case $1 in
 	all )
@@ -28,25 +27,23 @@ case $1 in
 	vim )
 		echo "Deploying .vimrc to ${paths["vimrc"]}..."
 		cp -i .vimrc ${paths["vimrc"]}
-		echo "Deploying .vim to ${paths["vimfolder"]}..."
+		echo "Deploying .vim/ to ${paths["vimfolder"]}..."
+		mkdir -p $HOME/.vim
 		cp -ir .vim/* ${paths["vimfolder"]}
 		;;
-	xmobar )
-		echo "Deploying .xmobarrc to ${paths["xmobar"]}..."
-		cp -i .xmobarrc ${paths["xmobar"]}
-		;;
-	xmonad )
-		echo "Deploying xmonad.hs to ${paths["xmonad"]}..."
-		cp -i xmonad.hs ${paths["xmonad"]}
-		;;
 	zsh )
-		echo "Deploying .zshrc to ${paths["zsh"]}..."
+		echo "Deploying .zshrc to ${paths["zshrc"]}..."
 		cp -i .zshrc ${paths["zshrc"]}
-		cp -ir .zsh ${paths["zshfolder"]}
+		mkdir -p $HOME/.zsh
+		cp -ir .zsh/* ${paths["zshfolder"]}
 		;;
 	urxvt )
 		echo "Deploying .Xdefaults to ${paths["urxvt"]}..."
 		cp -i .Xdefaults ${paths["urxvt"]}
+		;;
+	i3 )
+		echo "Deploying .i3/ to ${paths["i3"]}..."
+		cp -i .i3 ${paths["i3"]}
 		;;
 	update )
 		echo "Updating repository with local configs..."
@@ -67,6 +64,7 @@ case $1 in
 
 		echo "PROGRAMS"
 		echo "========"
+
 		echo "You can deploy configs for the following programs:"
 		echo
 		for i in ${options[@]}
