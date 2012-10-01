@@ -6,6 +6,8 @@ source ~/.zsh/keybinds
 #echo "Keybinds loaded."
 source ~/.zsh/aliases
 #echo "Aliases loaded."
+source ~/.zsh/functions
+#echo "Functions loaded."
 source ~/.zsh/startup
 #echo "Startup loaded."
 

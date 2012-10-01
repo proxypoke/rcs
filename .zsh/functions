@@ -1,0 +1,19 @@
+# vim: set ft=zsh
+
+set_urxvt_title () {
+	 print -Pn "\e]0;$*\a"
+}
+
+preexec () {
+	case "$TERM" in
+		screen*)
+			# set tmux' title to the currently running program
+			print -Pn "\033k$1\033\\"
+			;;
+		*)
+			# set urxvt's title. format:
+			# [user@host pwd] currently_running_program
+			print -Pn "\e]0;[%n@%m %~] $1\a"
+			;;
+	esac
+}

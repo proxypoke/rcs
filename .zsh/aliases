@@ -5,6 +5,7 @@ alias g='git'
 alias t='urxvt -cd $PWD &>/dev/null &; disown'
 alias f='ffbeta'
 alias s='sudo'
+alias untar='tar xfv'
 
 alias l='ll -a'
 alias ls='ls --color=auto'

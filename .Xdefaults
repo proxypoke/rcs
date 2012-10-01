@@ -49,7 +49,7 @@ URxvt.transparent: true
 URxvt.shading: 15
 URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
 URxvt.scrollBar: off
-
+URxvt.urgentOnBell: true
 
 # matcher settings
 URxvt.urlLauncher:      /usr/bin/firefox
