@@ -3,5 +3,8 @@
 .vim/.netrwhist
 .vim/sessions
 .vim/plugin
+.vim/syntax/*notmuch*
+
+.vim/bundle/.vundle
 
 .i3/i3log
