@@ -5,8 +5,8 @@ alias g='git'
 alias t='urxvt -cd $PWD &>/dev/null &; disown'
 alias f='ffbeta'
 alias s='sudo'
-alias l='ll'
 
+alias l='ll -a'
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -a --color=auto'
@@ -15,6 +15,19 @@ alias r='rsync -avzP'
 alias cp='rsync -azq'
 
 alias grep='grep --color'
+
+alias mnt='mount'
+alias umnt='umount'
+
+alias mame='sdlmame -rp .'
+
+# pacman aliases
+alias ps='pacman -S'
+alias pss='pacman -Ss'
+
+alias pq='pacman -Q'
+alias pql='pacman -Ql'
+alias pqi='pacman -Qi'
 
 #c aliases
 alias cc="gcc -Wall -Wshadow -Wextra --std=c99 -Werror"

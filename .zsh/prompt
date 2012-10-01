@@ -1,12 +1,40 @@
-# Lines are differently colored depending on the user
-# Regular user --> blue
-# root ----------> red
-if [ `whoami` = 'root' ]; then
-	PROMPT=$'%{\e[0;31m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;31m%}%B]%b%{\e[0m%} - %b%{\e[0;31m%}%B[%b%{\e[1;37m%}%~%{\e[0;31m%}%B]%b%{\e[0m%} 
-%{\e[0;31m%}%B└─%B[%{\e[1;35m%}$%{\e[0;31m%}%B]>%{\e[0m%}%b '
-	PS2=$'     \e[0;31m%}%B>%{\e[0m%}%b '
-else
-	PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} 
-%{\e[0;34m%}%B└─%B[%{\e[1;35m%}$%{\e[0;34m%}%B]>%{\e[0m%}%b '
-	PS2=$'     \e[0;34m%}%B>%{\e[0m%}%b '
-fi
+color () {
+	echo "%B%(!.%F{red}.%F{blue})$*%f%b"
+}
+
+# First line
+#
+PROMPT=$(color "┌─[")
+# username
+PROMPT+="%B%F{green}%n%f%b"
+# the @
+PROMPT+="%F{magenta}@%f"
+# hostname
+PROMPT+="%F{blue}%m%f"
+
+PROMPT+=$(color "]")
+PROMPT+=" - "
+PROMPT+=$(color "[")
+
+# working directory
+PROMPT+="%B%F{white}%~%f%b"
+
+PROMPT+=$(color "]")
+
+# return code
+PROMPT+=$'%(0?..\n'
+PROMPT+=$(color '├─[')
+PROMPT+='%F{red}Nonzero return: %?%f'
+PROMPT+=$(color ']')
+PROMPT+=')'
+
+
+# Second line
+#
+PROMPT+=$'\n'
+PROMPT+=$(color "└─[")
+# change the prompt character
+PROMPT+="%F{mag}%(!.#.$)%f"
+PROMPT+=$(color "]> ")
+# finally, a bell
+PROMPT+=$'\a'
