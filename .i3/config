@@ -138,7 +138,19 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 		mode hide
+		#mode dock
+
+		colors {
+			# class				border	backgr.	text
+			focused_workspace	#4c7899 #00AA00 #ffffff
+		}
 }
+
+# colors
+# class					border	backgr.	text	indicator
+client.focused			#4c7899 #00AA00 #000000 #00FF00
+client.focused_inactive	#333333 #335533 #000000	#449944
+client.unfocused		#333333	#222222	#00AA00 #00FF00
 
 # Mouse
 focus_follows_mouse no
@@ -149,3 +161,20 @@ assign [class="Smplayer2"] 5
 
 # stuff
 workspace_auto_back_and_forth yes
+
+# focus the most recent urgent window
+bindsym $mod+u [urgent="latest"] focus
+
+# i3-quickswitch
+bindsym $mod+b exec /usr/bin/quickswitch.py
+bindsym $mod+Shift+B exec "/usr/bin/quickswitch.py -s"
+
+# scratchpad
+bindsym $mod+minus move scratchpad
+bindsym $mod+plus scratchpad show
+
+# output switching
+bindsym $mod+x move workspace to output right
+
+# Neo Layout Viewer
+for_window [class="Neo_layout_viewer"] floating enable

@@ -10,6 +10,8 @@ Bundle 'klen/python-mode'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-session'
+Bundle 'bufexplorer.zip'
+Bundle 'Ferus/vimscripts'
 
 " filetype options
 filetype plugin indent on
@@ -48,20 +50,11 @@ set shiftwidth=4
 set tw=80
 set colorcolumn=81
 
-" fuck off arrow keys, nobody likes you.
-map <Up> <nop>
-imap <Up> <nop>
-map <Down> <nop>
-imap <Down> <nop>
-map <Left> <nop>
-imap <Left> <nop>
-map <Right> <nop>
-imap <Right> <nop>
-
 " mouse? in my vim? I don't think so.
 set mouse=
 
 " tabs, motherfucker, do you use them?
+set hidden
 nmap <C-t> :tabnew<CR>
 map th :tabfirst<CR>
 map tj :tabnext<CR>

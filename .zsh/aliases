@@ -7,7 +7,7 @@ alias f='ffbeta'
 alias s='sudo'
 alias untar='tar xfv'
 
-alias l='ll -a'
+alias l='ll -A'
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -a --color=auto'
@@ -23,7 +23,6 @@ alias umnt='umount'
 alias mame='sdlmame -rp .'
 
 # pacman aliases
-alias ps='pacman -S'
 alias pss='pacman -Ss'
 
 alias pq='pacman -Q'

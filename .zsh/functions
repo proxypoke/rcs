@@ -13,7 +13,7 @@ preexec () {
 		*)
 			# set urxvt's title. format:
 			# [user@host pwd] currently_running_program
-			print -Pn "\e]0;[%n@%m %~] $1\a"
+			print -Pn "\e]0;[%n@%m %~] $1 - urxvt\a"
 			;;
 	esac
 }
