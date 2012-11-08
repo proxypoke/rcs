@@ -26,24 +26,24 @@ case $1 in
 		;;
 	vim )
 		echo "Deploying .vimrc to ${paths["vimrc"]}..."
-		cp -i .vimrc ${paths["vimrc"]}
+		cp .vimrc ${paths["vimrc"]}
 		echo "Deploying .vim/ to ${paths["vimfolder"]}..."
 		mkdir -p $HOME/.vim
-		cp -ir .vim/* ${paths["vimfolder"]}
+		cp -r .vim/* ${paths["vimfolder"]}
 		;;
 	zsh )
 		echo "Deploying .zshrc to ${paths["zshrc"]}..."
-		cp -i .zshrc ${paths["zshrc"]}
+		cp .zshrc ${paths["zshrc"]}
 		mkdir -p $HOME/.zsh
-		cp -ir .zsh/* ${paths["zshfolder"]}
+		cp -r .zsh/* ${paths["zshfolder"]}
 		;;
 	urxvt )
 		echo "Deploying .Xdefaults to ${paths["urxvt"]}..."
-		cp -i .Xdefaults ${paths["urxvt"]}
+		cp .Xdefaults ${paths["urxvt"]}
 		;;
 	i3 )
 		echo "Deploying .i3/ to ${paths["i3"]}..."
-		cp -i .i3 ${paths["i3"]}
+		cp .i3 ${paths["i3"]}
 		;;
 	update )
 		echo "Updating repository with local configs..."
