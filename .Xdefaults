@@ -1,5 +1,5 @@
 # perl extensions
-URxvt.perl-ext-common:  default,matcher
+URxvt.perl-ext-common:  default,matcher,clipboard,url-select,keyboard-select
 URxvt.perl-ext:		default,urxvi
 
 # colors
@@ -44,16 +44,24 @@ urxvt*color15:    #EEEEEC
 
 
 # look & feel
-URxvt.foreground: green
+URxvt.foreground: lightblue
 URxvt.transparent: true
 URxvt.shading: 15
 URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
 URxvt.scrollBar: off
 URxvt.urgentOnBell: true
+URxvt.cursorUnderline: true
+URxvt.cursorColor: #34E2E2
+URxvt.underlineColor: #34E2E2
 
 # matcher settings
 URxvt.urlLauncher:      /usr/bin/firefox
 URxvt.matcher.button:   1
+
+# url-select
+URxvt.url-select.launcher:	/usr/bin/firefox
+URxvt.url-select.underline:	true
+URxvt.keysym.C-f:			perl:keyboard-select:search
 
 # urxvi settings
 URxvt.keysym.F1:	perl:urxvi

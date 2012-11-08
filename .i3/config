@@ -24,7 +24,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -b -nb "#222222" -sf "#000000" -sb "#00AA00"
 
 # change focus
 bindsym $mod+h focus left
@@ -151,6 +151,10 @@ bar {
 client.focused			#4c7899 #00AA00 #000000 #00FF00
 client.focused_inactive	#333333 #335533 #000000	#449944
 client.unfocused		#333333	#222222	#00AA00 #00FF00
+
+# border style
+new_window 1pixel
+hide_edge_borders both
 
 # Mouse
 focus_follows_mouse no

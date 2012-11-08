@@ -20,7 +20,7 @@ alias grep='grep --color'
 alias mnt='mount'
 alias umnt='umount'
 
-alias mame='sdlmame -rp .'
+#alias mame='sdlmame -rp .'
 
 # pacman aliases
 alias pss='pacman -Ss'
@@ -35,9 +35,11 @@ alias cc="gcc -Wall -Wshadow -Wextra --std=c99 -Werror"
 #python aliases
 alias py='python'
 alias bpy='bpython'
+alias ipy='ipython'
 
 alias py2='python2.7'
 alias bpy2='bpython2'
+alias ipy2='clear && ipython2'
 
 alias nt="nosetests3"
 alias nt2="nosetests2"

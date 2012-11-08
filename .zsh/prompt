@@ -2,13 +2,27 @@ color () {
 	echo "%B%(!.%F{red}.%F{blue})$*%f%b"
 }
 
+update_git_prompt () {
+	GIT_PROMPT=""
+	if [ -n "$(git_branch)" ]; then
+		GIT_PROMPT=$(color " - [")
+		GIT_PROMPT+="%F{yellow}"
+		GIT_PROMPT+=$(git_branch)
+		GIT_PROMPT+="%F"
+		GIT_PROMPT+=$(color "]")
+	fi
+	return 0
+}
+
 # First line
 #
-PROMPT=$(color "┌─[")
+# a bell
+PROMPT=$'\a'
+PROMPT+=$(color "┌─[")
 # username
-PROMPT+="%B%F{green}%n%f%b"
+#PROMPT+="%B%F{green}%n%f%b"
 # the @
-PROMPT+="%F{magenta}@%f"
+#PROMPT+="%F{magenta}@%f"
 # hostname
 PROMPT+="%F{blue}%m%f"
 
@@ -21,20 +35,19 @@ PROMPT+="%B%F{white}%~%f%b"
 
 PROMPT+=$(color "]")
 
-# return code
-PROMPT+=$'%(0?..\n'
-PROMPT+=$(color '├─[')
-PROMPT+='%F{red}Nonzero return: %?%f'
-PROMPT+=$(color ']')
-PROMPT+=')'
-
+# git prompt
+PROMPT+='${GIT_PROMPT}'
 
 # Second line
 #
 PROMPT+=$'\n'
 PROMPT+=$(color "└─[")
 # change the prompt character
-PROMPT+="%F{mag}%(!.#.$)%f"
+#PROMPT+="%F{mag}%(!.#.$)%f"
+PROMPT+=$'%(0?.$.%F{red}%?%F)'
 PROMPT+=$(color "]> ")
-# finally, a bell
-PROMPT+=$'\a'
+
+# Right prompt
+#
+# display the current vi mode
+RPROMPT='${VIMODE}'

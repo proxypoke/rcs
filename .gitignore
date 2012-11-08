@@ -11,3 +11,5 @@
 .i3/i3log
 
 .zsh/*.zwc
+
+**/.git

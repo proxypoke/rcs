@@ -1,0 +1,20 @@
+" vim: ft=vim :
+" set up vundle
+filetype off " required
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Bundles
+Bundle 'gmarik/vundle'
+Bundle 'klen/python-mode'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'xolox/vim-session'
+Bundle 'bufexplorer.zip'
+Bundle 'Ferus/vimscripts'
+Bundle 'vim-scripts/Haskell-Conceal'
+
+" filetype options
+filetype plugin indent on
+

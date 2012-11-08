@@ -1,20 +1,8 @@
-" set up vundle
-filetype off " required
-
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-" Bundles
-Bundle 'gmarik/vundle'
-Bundle 'klen/python-mode'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'xolox/vim-session'
-Bundle 'bufexplorer.zip'
-Bundle 'Ferus/vimscripts'
-
-" filetype options
-filetype plugin indent on
+" Get some extra stuff from external
+" files to keep down the clutter here.
+source ~/.vim/vundlerc
+source ~/.vim/functions
+source ~/.vim/statusline
 
 " gtfo swapfiles
 set directory=~/.vim/swp
@@ -25,8 +13,9 @@ let g:session_autoload=1
 
 " syntax highlighting, line numbers
 syntax on
-colorscheme default
+colorscheme kosmos
 set cursorline
+set cursorcolumn
 set number
 set hlsearch
 
@@ -65,3 +54,11 @@ map tm :tabmove<Space>
 
 " various stuff
 nmap <CR> o<Esc>
+
+set wildmenu
+set wildmode=longest:full
+set wildignore=*.o,*a,*.py[oc]
+
+" When .vimrc is edited, automatically reload it (stolen from eeemsi)
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
